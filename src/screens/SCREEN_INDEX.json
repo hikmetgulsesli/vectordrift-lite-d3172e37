@@ -1,0 +1,127 @@
+[
+  {
+    "screenId": "33d9f7fcbaf64dc6a12cc2141b5520eb",
+    "title": "Gameplay - VectorDrift Lite",
+    "componentName": "GameplayVectordriftLite",
+    "file": "src/screens/GameplayVectordriftLite.tsx",
+    "buttons": 4,
+    "inputs": 0,
+    "links": 0,
+    "actions": [
+      {
+        "id": "pause-game-1",
+        "kind": "button",
+        "label": "Pause Game",
+        "index": 0
+      },
+      {
+        "id": "restart-game-2",
+        "kind": "button",
+        "label": "Restart Game",
+        "index": 1
+      },
+      {
+        "id": "settings-3",
+        "kind": "button",
+        "label": "Settings",
+        "index": 2
+      },
+      {
+        "id": "start-game-4",
+        "kind": "button",
+        "label": "Start Game",
+        "index": 3
+      }
+    ]
+  },
+  {
+    "screenId": "620199bd7fd74f3e91fc9f31f197c046",
+    "title": "Game Settings - VectorDrift Lite",
+    "componentName": "GameSettingsVectordriftLite",
+    "file": "src/screens/GameSettingsVectordriftLite.tsx",
+    "buttons": 5,
+    "inputs": 5,
+    "links": 7,
+    "actions": [
+      {
+        "id": "pause-1",
+        "kind": "button",
+        "label": "Pause",
+        "index": 0
+      },
+      {
+        "id": "upgrade-ship-2",
+        "kind": "button",
+        "label": "UPGRADE SHIP",
+        "index": 1
+      },
+      {
+        "id": "reset-all-3",
+        "kind": "button",
+        "label": "RESET ALL",
+        "index": 2
+      },
+      {
+        "id": "return-to-gameplay-4",
+        "kind": "button",
+        "label": "RETURN TO GAMEPLAY",
+        "index": 3
+      },
+      {
+        "id": "save-preferences-5",
+        "kind": "button",
+        "label": "SAVE PREFERENCES",
+        "index": 4
+      },
+      {
+        "id": "resume-1",
+        "kind": "link",
+        "label": "Resume",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "settings-2",
+        "kind": "link",
+        "label": "Settings",
+        "href": "#",
+        "index": 1
+      },
+      {
+        "id": "leaderboard-3",
+        "kind": "link",
+        "label": "Leaderboard",
+        "href": "#",
+        "index": 2
+      },
+      {
+        "id": "quit-4",
+        "kind": "link",
+        "label": "Quit",
+        "href": "#",
+        "index": 3
+      },
+      {
+        "id": "support-5",
+        "kind": "link",
+        "label": "Support",
+        "href": "#",
+        "index": 4
+      },
+      {
+        "id": "privacy-6",
+        "kind": "link",
+        "label": "Privacy",
+        "href": "#",
+        "index": 5
+      },
+      {
+        "id": "eula-7",
+        "kind": "link",
+        "label": "EULA",
+        "href": "#",
+        "index": 6
+      }
+    ]
+  }
+]
