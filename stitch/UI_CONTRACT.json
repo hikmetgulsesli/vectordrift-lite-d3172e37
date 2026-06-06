@@ -1,0 +1,268 @@
+[
+  {
+    "screenId": "33d9f7fcbaf64dc6a12cc2141b5520eb",
+    "screenTitle": "Gameplay - VectorDrift Lite",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "Pause Game",
+        "line": 228
+      },
+      {
+        "type": "button",
+        "label": "Restart Game",
+        "line": 231
+      },
+      {
+        "type": "button",
+        "label": "Settings",
+        "line": 234
+      },
+      {
+        "type": "button",
+        "label": "Start Game",
+        "line": 276
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Pause Game",
+        "line": 228
+      },
+      {
+        "type": "button",
+        "label": "Restart Game",
+        "line": 231
+      },
+      {
+        "type": "button",
+        "label": "Settings",
+        "line": 234
+      },
+      {
+        "type": "button",
+        "label": "Start Game",
+        "line": 276
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 4,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "620199bd7fd74f3e91fc9f31f197c046",
+    "screenTitle": "Game Settings - VectorDrift Lite",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Resume",
+        "href": "#",
+        "line": 218
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 224
+      },
+      {
+        "type": "link",
+        "label": "leaderboard",
+        "href": "#",
+        "line": 230
+      },
+      {
+        "type": "link",
+        "label": "Quit",
+        "href": "#",
+        "line": 236
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 358
+      },
+      {
+        "type": "link",
+        "label": "Privacy",
+        "href": "#",
+        "line": 359
+      },
+      {
+        "type": "link",
+        "label": "EULA",
+        "href": "#",
+        "line": 360
+      },
+      {
+        "type": "button",
+        "label": "pause",
+        "line": 205
+      },
+      {
+        "type": "button",
+        "label": "UPGRADE SHIP",
+        "line": 243
+      },
+      {
+        "type": "button",
+        "label": "RESET ALL",
+        "line": 341
+      },
+      {
+        "type": "button",
+        "label": "RETURN TO GAMEPLAY",
+        "line": 345
+      },
+      {
+        "type": "button",
+        "label": "SAVE PREFERENCES",
+        "line": 348
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 270
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 276
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 282
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 300
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 308
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Resume",
+        "href": "#",
+        "line": 218
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 224
+      },
+      {
+        "type": "link",
+        "label": "leaderboard",
+        "href": "#",
+        "line": 230
+      },
+      {
+        "type": "link",
+        "label": "Quit",
+        "href": "#",
+        "line": 236
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 358
+      },
+      {
+        "type": "link",
+        "label": "Privacy",
+        "href": "#",
+        "line": 359
+      },
+      {
+        "type": "link",
+        "label": "EULA",
+        "href": "#",
+        "line": 360
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "pause",
+        "line": 205
+      },
+      {
+        "type": "button",
+        "label": "UPGRADE SHIP",
+        "line": 243
+      },
+      {
+        "type": "button",
+        "label": "RESET ALL",
+        "line": 341
+      },
+      {
+        "type": "button",
+        "label": "RETURN TO GAMEPLAY",
+        "line": 345
+      },
+      {
+        "type": "button",
+        "label": "SAVE PREFERENCES",
+        "line": 348
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 270
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 276
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 282
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 300
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 308
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 17,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  }
+]
