@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VectorDrift Lite</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;600&amp;family=Sora:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#35343a",
+                        "surface-container-high": "#2a292f",
+                        "tertiary-fixed-dim": "#d1bcff",
+                        "on-tertiary-fixed": "#23005b",
+                        "surface-tint": "#00dbe7",
+                        "on-error": "#690005",
+                        "secondary-container": "#ff24e4",
+                        "surface-container-lowest": "#0e0e13",
+                        "on-secondary-fixed-variant": "#840076",
+                        "on-secondary-container": "#520049",
+                        "on-primary-fixed-variant": "#004f54",
+                        "inverse-surface": "#e4e1e9",
+                        "outline-variant": "#3a494b",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#e9ddff",
+                        "error-container": "#93000a",
+                        "background": "#131318",
+                        "surface-variant": "#35343a",
+                        "on-secondary-fixed": "#3a0033",
+                        "primary-fixed-dim": "#00dbe7",
+                        "on-tertiary-fixed-variant": "#5700c9",
+                        "secondary-fixed": "#ffd7f0",
+                        "primary-container": "#00f2ff",
+                        "on-primary-container": "#006a71",
+                        "surface-container-low": "#1b1b20",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-container": "#7318ff",
+                        "on-primary": "#00363a",
+                        "inverse-on-surface": "#303035",
+                        "surface-container": "#1f1f24",
+                        "on-surface-variant": "#b9cacb",
+                        "tertiary": "#fcf5ff",
+                        "outline": "#849495",
+                        "surface-dim": "#131318",
+                        "on-surface": "#e4e1e9",
+                        "on-tertiary": "#3c0090",
+                        "on-primary-fixed": "#002022",
+                        "on-secondary": "#5e0053",
+                        "secondary-fixed-dim": "#fface8",
+                        "tertiary-container": "#e3d4ff",
+                        "primary": "#e1fdff",
+                        "surface": "#131318",
+                        "secondary": "#fface8",
+                        "primary-fixed": "#74f5ff",
+                        "surface-bright": "#39383e",
+                        "inverse-primary": "#00696f",
+                        "on-background": "#e4e1e9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-margin": "24px",
+                        "gutter": "16px",
+                        "xl": "40px",
+                        "unit": "4px",
+                        "sm": "8px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Sora"],
+                        "stats-xl": ["Space Grotesk"],
+                        "label-caps": ["Space Grotesk"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Sora"],
+                        "headline-md": ["Sora"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "stats-xl": ["40px", { "lineHeight": "1.0", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-md": ["24px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0e0e13;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .perspective-grid {
+            position: absolute;
+            bottom: 0;
+            left: -50%;
+            width: 200%;
+            height: 100vh;
+            background-image: 
+                linear-gradient(rgba(0, 242, 255, 0.2) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 242, 255, 0.2) 1px, transparent 1px);
+            background-size: 100px 100px;
+            transform: perspective(600px) rotateX(60deg) translateY(100px);
+            animation: gridMove 2s linear infinite;
+            z-index: 0;
+        }
+
+        .horizon-glow {
+            position: absolute;
+            top: 40%;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(to bottom, rgba(0, 242, 255, 0.5), transparent);
+            filter: blur(40px);
+            z-index: 1;
+        }
+
+        @keyframes gridMove {
+            0% { transform: perspective(600px) rotateX(60deg) translateY(100px); }
+            100% { transform: perspective(600px) rotateX(60deg) translateY(200px); }
+        }
+
+        .ship {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 60px solid #00f2ff;
+            filter: drop-shadow(0 0 20px #00f2ff);
+            z-index: 10;
+        }
+
+        .ship-trail {
+            position: absolute;
+            bottom: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 80px;
+            background: linear-gradient(to bottom, rgba(0, 242, 255, 0.8), transparent);
+            filter: blur(8px);
+        }
+
+        .gate {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.1);
+            width: 400px;
+            height: 200px;
+            border: 4px solid #ff24e4;
+            box-shadow: 0 0 20px #ff24e4, inset 0 0 20px #ff24e4;
+            border-radius: 20px;
+            z-index: 5;
+            animation: gateApproach 4s linear infinite;
+        }
+
+        .gate:nth-child(2) { animation-delay: 2s; }
+
+        @keyframes gateApproach {
+            0% { transform: translate(-50%, -50%) scale(0.1); opacity: 0; }
+            20% { opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+        }
+
+        .hud-glass {
+            background: rgba(20, 20, 28, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 242, 255, 0.3);
+            box-shadow: 0 0 10px rgba(0, 242, 255, 0.1);
+        }
+
+        .btn-primary {
+            background-color: #00f2ff;
+            color: #000;
+            transition: all 0.2s;
+            box-shadow: 0 0 15px rgba(0, 242, 255, 0.5);
+        }
+        .btn-primary:hover {
+            box-shadow: 0 0 30px rgba(0, 242, 255, 0.8);
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #ff24e4;
+            border: 1px solid #ff24e4;
+            transition: all 0.2s;
+        }
+        .btn-secondary:hover {
+            box-shadow: 0 0 15px rgba(255, 36, 228, 0.5), inset 0 0 10px rgba(255, 36, 228, 0.3);
+        }
+
+        .progress-bar-fill {
+            background: linear-gradient(90deg, #d1bcff, #00f2ff);
+            box-shadow: 2px 0 10px #00f2ff;
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface h-screen w-screen relative">
+<!-- TopAppBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-container-margin py-md bg-transparent flat no shadows text-primary-fixed-dim">
+<div class="font-display-lg-mobile text-display-lg-mobile text-primary-container drop-shadow-[0_0_8px_rgba(0,242,255,0.6)]">VectorDrift Lite</div>
+<div class="flex gap-gutter items-center">
+<button aria-label="Pause Game" class="btn-secondary px-sm py-xs rounded flex items-center justify-center hover:scale-105 transition-transform">
+<span class="material-symbols-outlined font-label-caps text-label-caps" data-icon="pause">pause</span>
+</button>
+<button aria-label="Restart Game" class="btn-secondary px-sm py-xs rounded flex items-center justify-center hover:scale-105 transition-transform">
+<span class="material-symbols-outlined font-label-caps text-label-caps" data-icon="restart_alt">restart_alt</span>
+</button>
+<button aria-label="Settings" class="text-on-surface-variant hover:text-primary-fixed hover:scale-105 transition-transform">
+<span class="material-symbols-outlined font-headline-md text-headline-md-mobile" data-icon="settings">settings</span>
+</button>
+</div>
+</nav>
+<!-- Playfield Background Elements -->
+<div class="horizon-glow"></div>
+<div class="perspective-grid"></div>
+<!-- Active Gameplay Elements -->
+<div class="gate"></div>
+<div class="gate"></div>
+<!-- The Ship -->
+<div class="ship">
+<div class="ship-trail"></div>
+</div>
+<!-- HUD Elements -->
+<!-- Top Left Score -->
+<div class="fixed top-[80px] left-container-margin z-40 hud-glass px-md py-sm rounded-lg flex flex-col gap-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant tracking-widest">SCORE</span>
+<span class="font-stats-xl text-stats-xl text-primary-container drop-shadow-[0_0_5px_rgba(0,242,255,0.8)]">12,450</span>
+</div>
+<!-- Top Right Level -->
+<div class="fixed top-[80px] right-container-margin z-40 hud-glass px-md py-sm rounded-lg flex flex-col gap-xs items-end">
+<span class="font-label-caps text-label-caps text-on-surface-variant tracking-widest">LEVEL</span>
+<span class="font-stats-xl text-stats-xl text-secondary-container drop-shadow-[0_0_5px_rgba(255,36,228,0.8)]">07</span>
+</div>
+<!-- Bottom Center Progress Bar -->
+<div class="fixed bottom-xl left-1/2 transform -translate-x-1/2 w-full max-w-md z-40 px-container-margin md:px-0">
+<div class="flex justify-between items-end mb-sm">
+<span class="font-label-caps text-label-caps text-primary-container">DISTANCE TO NEXT SECTOR</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">85%</span>
+</div>
+<div class="w-full h-[4px] bg-surface-container-highest rounded-full overflow-hidden">
+<div class="progress-bar-fill h-full rounded-full w-[85%] relative">
+<div class="absolute right-0 top-1/2 transform -translate-y-1/2 w-[8px] h-[8px] bg-white rounded-full shadow-[0_0_10px_#fff]"></div>
+</div>
+</div>
+</div>
+<!-- Central Overlay (Initial Load / Pause State Simulation) -->
+<!-- Note: Hidden by default, simulating active gameplay, but included per prompt -->
+<div class="hidden absolute inset-0 bg-background/80 backdrop-blur-sm z-[60] flex items-center justify-center flex-col gap-lg">
+<h1 class="font-display-lg text-display-lg text-primary-container drop-shadow-[0_0_15px_rgba(0,242,255,0.8)]">SYSTEM READY</h1>
+<button class="btn-primary font-label-caps text-label-caps px-xl py-md rounded-lg uppercase tracking-[0.2em]">Start Game</button>
+</div>
+</body></html>

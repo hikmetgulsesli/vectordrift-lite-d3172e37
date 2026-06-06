@@ -1,0 +1,20 @@
+[
+  {
+    "screenId": "33d9f7fcbaf64dc6a12cc2141b5520eb",
+    "name": "Gameplay - VectorDrift Lite",
+    "type": "game",
+    "description": "Gameplay - VectorDrift Lite screen",
+    "surfaceIds": [
+      "SURF_GAMEPLAY"
+    ]
+  },
+  {
+    "screenId": "620199bd7fd74f3e91fc9f31f197c046",
+    "name": "Game Settings - VectorDrift Lite",
+    "type": "settings",
+    "description": "Game Settings - VectorDrift Lite screen",
+    "surfaceIds": [
+      "SURF_GAME_SETTINGS"
+    ]
+  }
+]

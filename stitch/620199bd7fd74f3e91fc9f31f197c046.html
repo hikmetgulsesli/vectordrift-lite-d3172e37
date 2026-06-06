@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Game Settings - VectorDrift Lite</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&amp;family=Space+Grotesk:wght@600;700&amp;family=Inter:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#35343a",
+                    "surface-container-high": "#2a292f",
+                    "tertiary-fixed-dim": "#d1bcff",
+                    "on-tertiary-fixed": "#23005b",
+                    "surface-tint": "#00dbe7",
+                    "on-error": "#690005",
+                    "secondary-container": "#ff24e4",
+                    "surface-container-lowest": "#0e0e13",
+                    "on-secondary-fixed-variant": "#840076",
+                    "on-secondary-container": "#520049",
+                    "on-primary-fixed-variant": "#004f54",
+                    "inverse-surface": "#e4e1e9",
+                    "outline-variant": "#3a494b",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed": "#e9ddff",
+                    "error-container": "#93000a",
+                    "background": "#131318",
+                    "surface-variant": "#35343a",
+                    "on-secondary-fixed": "#3a0033",
+                    "primary-fixed-dim": "#00dbe7",
+                    "on-tertiary-fixed-variant": "#5700c9",
+                    "secondary-fixed": "#ffd7f0",
+                    "primary-container": "#00f2ff",
+                    "on-primary-container": "#006a71",
+                    "surface-container-low": "#1b1b20",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary-container": "#7318ff",
+                    "on-primary": "#00363a",
+                    "inverse-on-surface": "#303035",
+                    "surface-container": "#1f1f24",
+                    "on-surface-variant": "#b9cacb",
+                    "tertiary": "#fcf5ff",
+                    "outline": "#849495",
+                    "surface-dim": "#131318",
+                    "on-surface": "#e4e1e9",
+                    "on-tertiary": "#3c0090",
+                    "on-primary-fixed": "#002022",
+                    "on-secondary": "#5e0053",
+                    "secondary-fixed-dim": "#fface8",
+                    "tertiary-container": "#e3d4ff",
+                    "primary": "#e1fdff",
+                    "surface": "#131318",
+                    "secondary": "#fface8",
+                    "primary-fixed": "#74f5ff",
+                    "surface-bright": "#39383e",
+                    "inverse-primary": "#00696f",
+                    "on-background": "#e4e1e9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-margin": "24px",
+                    "gutter": "16px",
+                    "xl": "40px",
+                    "unit": "4px",
+                    "sm": "8px",
+                    "xs": "4px",
+                    "lg": "24px",
+                    "md": "16px"
+            },
+            "fontFamily": {
+                    "display-lg": [
+                            "Sora"
+                    ],
+                    "stats-xl": [
+                            "Space Grotesk"
+                    ],
+                    "label-caps": [
+                            "Space Grotesk"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "display-lg-mobile": [
+                            "Sora"
+                    ],
+                    "headline-md": [
+                            "Sora"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "stats-xl": [
+                            "40px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "0.15em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "letterSpacing": "0em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "letterSpacing": "0em",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>body {
+    background-color: #131318;
+    color: #e4e1e9
+    }
+/* Custom glow effects for HUD aesthetic */
+.hud-border-glow {
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.5)
+    }
+.hud-border-glow-secondary {
+    box-shadow: 0 0 8px rgba(255, 36, 228, 0.4)
+    }
+.hud-text-glow {
+    text-shadow: 0 0 8px rgba(0, 242, 255, 0.6)
+    }
+/* Scanline effect for background */
+.scanlines {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1));
+    background-size: 100% 4px
+    }
+/* Hide scrollbar for cleaner HUD look */
+::-webkit-scrollbar {
+    display: none
+    }
+/* Simulated gameplay background to show off glassmorphism */
+.simulated-bg {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDi2AF5iN7_zNq_nusfBnzFXVO2ww50iZ8UQUeDhoUpTUxPmaTWY7iKEm45jGSrZEbT78WqLg6M09CpUzFMOL7VRNa7eoA6qSvKBpwefffy8UynnTDqzTjmDaTjb5U3HzfCnF9aMdi35zvVGVqXZmPMc9qTE5sSGQyT2_RljVIfL9m3E6PAeq_R-SlMRlRmbo9PRX8mvDmTJ96U4u-yrjG6hBpqinmC_UZZIU0u23A_ehEKO7uMpXfkFY6TqNOrWSHG_tkPHeHMEQ);
+    background-size: cover;
+    background-position: center
+    }</style>
+</head>
+<body class="antialiased min-h-screen font-body-md bg-background overflow-hidden relative">
+<!-- Simulated Gameplay Background -->
+<div class="absolute inset-0 simulated-bg opacity-40 z-0"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-container-margin py-md bg-transparent">
+<div class="flex items-center gap-sm">
+<span class="font-display-lg-mobile text-display-lg-mobile text-primary-container drop-shadow-[0_0_8px_rgba(0,242,255,0.6)]">VectorDrift Lite</span>
+</div>
+<div class="flex items-center gap-md">
+<button class="text-primary-fixed-dim hover:text-primary-fixed hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" style="font-size: 28px;">pause</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="hidden md:flex fixed inset-y-0 right-0 z-[100] flex-col p-lg bg-surface/70 backdrop-blur-xl border-l border-primary/20 shadow-[0_0_20px_rgba(0,219,231,0.2)] w-80">
+<div class="mb-xl flex flex-col items-end text-right border-b border-primary/20 pb-md">
+<h2 class="font-headline-md text-headline-md-mobile text-primary">PAUSED</h2>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-xs">Sector 7-G</p>
+</div>
+<ul class="flex flex-col gap-sm flex-grow">
+<li>
+<a class="flex items-center justify-end gap-md p-sm text-on-surface-variant hover:bg-primary/10 hover:text-primary transition-colors rounded-DEFAULT font-label-caps text-label-caps group" href="#">
+<span class="group-hover:-translate-x-1 transition-transform">Resume</span>
+<span class="material-symbols-outlined">play_arrow</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-end gap-md p-sm text-primary-fixed-dim border-r-2 border-primary-fixed-dim pr-4 font-label-caps text-label-caps bg-primary/5" href="#">
+<span>Settings</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-end gap-md p-sm text-on-surface-variant hover:bg-primary/10 hover:text-primary transition-colors rounded-DEFAULT font-label-caps text-label-caps group" href="#">
+<span class="group-hover:-translate-x-1 transition-transform">Leaderboard</span>
+<span class="material-symbols-outlined">leaderboard</span>
+</a>
+</li>
+<li class="mt-auto">
+<a class="flex items-center justify-end gap-md p-sm text-error hover:bg-error/10 transition-colors rounded-DEFAULT font-label-caps text-label-caps group" href="#">
+<span class="group-hover:-translate-x-1 transition-transform">Quit</span>
+<span class="material-symbols-outlined">exit_to_app</span>
+</a>
+</li>
+</ul>
+<div class="mt-lg border-t border-primary/20 pt-md">
+<button class="w-full py-sm border border-secondary-container text-secondary-container font-label-caps text-label-caps hover:bg-secondary-container/10 transition-colors hud-border-glow-secondary uppercase tracking-widest text-center block">
+                UPGRADE SHIP
+            </button>
+</div>
+</nav>
+<!-- Main Canvas (Settings Overlay) -->
+<main class="relative z-10 flex items-center justify-center min-h-screen px-container-margin py-xl md:pr-[360px]">
+<!-- Settings Glass Panel -->
+<div class="w-full max-w-2xl bg-[#14141c]/70 backdrop-blur-[24px] border border-primary-fixed-dim/50 hud-border-glow p-lg md:p-xl rounded-lg scanlines relative overflow-hidden">
+<!-- Corner Accents -->
+<div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-primary-container"></div>
+<div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-primary-container"></div>
+<div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-primary-container"></div>
+<div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-primary-container"></div>
+<header class="mb-lg border-b border-primary-fixed-dim/30 pb-sm flex justify-between items-end">
+<h1 class="font-headline-md text-headline-md-mobile md:font-headline-md md:text-headline-md text-primary uppercase tracking-widest hud-text-glow">System Settings</h1>
+<span class="font-label-caps text-label-caps text-primary-fixed-dim/70">v.1.0.4b</span>
+</header>
+<div class="space-y-xl">
+<!-- Difficulty/Speed Section -->
+<section>
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">speed</span>
+<h3 class="font-label-caps text-label-caps text-on-surface">FLIGHT SPEED CLASS</h3>
+</div>
+<div class="grid grid-cols-3 gap-xs">
+<label class="relative cursor-pointer block">
+<input class="peer sr-only" name="speed" type="radio" value="relaxed"/>
+<div class="text-center py-sm border border-outline-variant text-on-surface-variant font-label-caps text-label-caps bg-surface-container-lowest peer-checked:bg-primary-container/20 peer-checked:border-primary-fixed-dim peer-checked:text-primary-fixed-dim peer-checked:hud-border-glow transition-all">
+                                RELAXED
+                            </div>
+</label>
+<label class="relative cursor-pointer block">
+<input checked="" class="peer sr-only" name="speed" type="radio" value="standard"/>
+<div class="text-center py-sm border border-outline-variant text-on-surface-variant font-label-caps text-label-caps bg-surface-container-lowest peer-checked:bg-primary-container/20 peer-checked:border-primary-fixed-dim peer-checked:text-primary-fixed-dim peer-checked:hud-border-glow transition-all">
+                                STANDARD
+                            </div>
+</label>
+<label class="relative cursor-pointer block">
+<input class="peer sr-only" name="speed" type="radio" value="hyper"/>
+<div class="text-center py-sm border border-outline-variant text-on-surface-variant font-label-caps text-label-caps bg-surface-container-lowest peer-checked:bg-error-container/40 peer-checked:border-error peer-checked:text-error transition-all" style="box-shadow: 0 0 10px rgba(255, 180, 171, 0.2);">
+                                HYPER
+                            </div>
+</label>
+</div>
+</section>
+<!-- Audio Section -->
+<section>
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">tune</span>
+<h3 class="font-label-caps text-label-caps text-on-surface">AUDIO TELEMETRY</h3>
+</div>
+<div class="space-y-sm">
+<!-- Music Toggle -->
+<div class="flex items-center justify-between p-sm bg-surface-container-lowest/50 border-l-2 border-primary-fixed-dim">
+<span class="font-body-md text-body-md text-on-surface">BGM Soundtrack</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container border border-outline-variant"></div>
+</label>
+</div>
+<!-- SFX Toggle -->
+<div class="flex items-center justify-between p-sm bg-surface-container-lowest/50 border-l-2 border-primary-fixed-dim">
+<span class="font-body-md text-body-md text-on-surface">Cockpit SFX</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container border border-outline-variant"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Controls Help Section -->
+<section>
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">keyboard</span>
+<h3 class="font-label-caps text-label-caps text-on-surface">INPUT MAPPING</h3>
+</div>
+<div class="grid grid-cols-2 gap-md p-md border border-outline-variant/30 bg-surface-container-lowest/30">
+<div class="flex flex-col gap-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant">STEERING</span>
+<div class="flex items-center gap-unit">
+<kbd class="px-2 py-1 bg-surface-container-high border-b-2 border-primary-fixed-dim/50 rounded-DEFAULT font-label-caps text-label-caps text-primary">W</kbd>
+<kbd class="px-2 py-1 bg-surface-container-high border-b-2 border-primary-fixed-dim/50 rounded-DEFAULT font-label-caps text-label-caps text-primary">A</kbd>
+<kbd class="px-2 py-1 bg-surface-container-high border-b-2 border-primary-fixed-dim/50 rounded-DEFAULT font-label-caps text-label-caps text-primary">S</kbd>
+<kbd class="px-2 py-1 bg-surface-container-high border-b-2 border-primary-fixed-dim/50 rounded-DEFAULT font-label-caps text-label-caps text-primary">D</kbd>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant">BRAKE / DRIFT</span>
+<div>
+<kbd class="px-4 py-1 bg-surface-container-high border-b-2 border-secondary-container/50 rounded-DEFAULT font-label-caps text-label-caps text-secondary">SPACEBAR</kbd>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Action Buttons -->
+<footer class="mt-xl pt-md border-t border-primary-fixed-dim/30 flex flex-col sm:flex-row items-center justify-between gap-md">
+<button class="text-on-surface-variant font-label-caps text-label-caps hover:text-error transition-colors uppercase tracking-widest text-sm underline decoration-1 underline-offset-4">
+                    RESET ALL
+                </button>
+<div class="flex flex-col sm:flex-row w-full sm:w-auto gap-sm">
+<button class="px-lg py-sm border border-primary-fixed-dim text-primary-fixed-dim font-label-caps text-label-caps hover:bg-primary-fixed-dim/10 transition-colors uppercase tracking-widest">
+                        RETURN TO GAMEPLAY
+                    </button>
+<button class="px-lg py-sm bg-primary-container text-on-primary-container font-label-caps text-label-caps hover:bg-primary transition-colors hud-border-glow uppercase tracking-widest font-bold">
+                        SAVE PREFERENCES
+                    </button>
+</div>
+</footer>
+</div>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 w-full z-40 flex justify-between items-center px-container-margin py-sm bg-transparent">
+<div class="flex gap-md">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 uppercase" href="#">Support</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 uppercase" href="#">Privacy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 uppercase" href="#">EULA</a>
+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase text-right md:pr-[360px] hidden sm:block">© 2024 VECTOR DRIFT LITE. ALL SYSTEMS NOMINAL.</p>
+</footer>
+</body></html>

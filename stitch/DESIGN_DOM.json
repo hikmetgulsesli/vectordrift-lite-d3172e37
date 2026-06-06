@@ -1,0 +1,822 @@
+{
+  "generatedAt": "2026-06-06T00:45:40.389Z",
+  "screenCount": 2,
+  "screens": {
+    "33d9f7fcbaf64dc6a12cc2141b5520eb": {
+      "screenId": "33d9f7fcbaf64dc6a12cc2141b5520eb",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-row",
+          "classes": [
+            "fixed",
+            "top-0",
+            "left-0",
+            "w-full",
+            "z-50",
+            "flex",
+            "justify-between",
+            "items-center",
+            "px-container-margin",
+            "py-md"
+          ],
+          "childCount": 2
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Pause Game",
+          "classes": [
+            "btn-secondary",
+            "px-sm",
+            "py-xs",
+            "rounded",
+            "flex",
+            "items-center",
+            "justify-center",
+            "hover:scale-105",
+            "transition-transform"
+          ],
+          "icon": "pause",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Restart Game",
+          "classes": [
+            "btn-secondary",
+            "px-sm",
+            "py-xs",
+            "rounded",
+            "flex",
+            "items-center",
+            "justify-center",
+            "hover:scale-105",
+            "transition-transform"
+          ],
+          "icon": "restart_alt",
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "Settings",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-primary-fixed",
+            "hover:scale-105",
+            "transition-transform"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/settings",
+          "expectedRoute": "/settings",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "Start Game",
+          "classes": [
+            "btn-primary",
+            "font-label-caps",
+            "text-label-caps",
+            "px-xl",
+            "py-md",
+            "rounded-lg",
+            "uppercase",
+            "tracking-[0.2em]"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "VectorDrift Lite",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "pause",
+          "classes": [],
+          "icon": "pause",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [],
+      "cards": [],
+      "icons": [
+        "pause",
+        "restart_alt",
+        "settings"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "surface-container-highest": "#35343a",
+        "surface-container-high": "#2a292f",
+        "tertiary-fixed-dim": "#d1bcff",
+        "on-tertiary-fixed": "#23005b",
+        "surface-tint": "#00dbe7",
+        "on-error": "#690005",
+        "secondary-container": "#ff24e4",
+        "surface-container-lowest": "#0e0e13",
+        "on-secondary-fixed-variant": "#840076",
+        "on-secondary-container": "#520049",
+        "on-primary-fixed-variant": "#004f54",
+        "inverse-surface": "#e4e1e9",
+        "outline-variant": "#3a494b",
+        "error": "#ffb4ab",
+        "tertiary-fixed": "#e9ddff",
+        "error-container": "#93000a",
+        "background": "#131318",
+        "surface-variant": "#35343a",
+        "on-secondary-fixed": "#3a0033",
+        "primary-fixed-dim": "#00dbe7",
+        "on-tertiary-fixed-variant": "#5700c9",
+        "secondary-fixed": "#ffd7f0",
+        "primary-container": "#00f2ff",
+        "on-primary-container": "#006a71",
+        "surface-container-low": "#1b1b20",
+        "on-error-container": "#ffdad6",
+        "on-tertiary-container": "#7318ff",
+        "on-primary": "#00363a",
+        "inverse-on-surface": "#303035",
+        "surface-container": "#1f1f24",
+        "on-surface-variant": "#b9cacb",
+        "tertiary": "#fcf5ff",
+        "outline": "#849495",
+        "surface-dim": "#131318",
+        "on-surface": "#e4e1e9",
+        "on-tertiary": "#3c0090",
+        "on-primary-fixed": "#002022",
+        "on-secondary": "#5e0053",
+        "secondary-fixed-dim": "#fface8",
+        "tertiary-container": "#e3d4ff",
+        "primary": "#e1fdff",
+        "surface": "#131318",
+        "secondary": "#fface8",
+        "primary-fixed": "#74f5ff",
+        "surface-bright": "#39383e",
+        "inverse-primary": "#00696f",
+        "on-background": "#e4e1e9"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Space Grotesk",
+        "Inter",
+        "Sora"
+      ],
+      "layoutHints": {
+        "flexDirection": "col"
+      },
+      "behaviorContract": [
+        {
+          "kind": "button",
+          "label": "Pause Game",
+          "icon": "pause",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Restart Game",
+          "icon": "restart_alt",
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "Settings",
+          "icon": "settings",
+          "action": "navigate",
+          "route": "/settings",
+          "expectedBehavior": "navigate:/settings"
+        },
+        {
+          "kind": "button",
+          "label": "Start Game",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "VectorDrift Lite",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "pause",
+          "icon": "pause",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "VectorDrift Lite",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "pause",
+          "icon": "pause",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Restart Game",
+          "icon": "restart_alt",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Settings",
+          "icon": "settings",
+          "active": true
+        }
+      ],
+      "title": "Gameplay - VectorDrift Lite"
+    },
+    "620199bd7fd74f3e91fc9f31f197c046": {
+      "screenId": "620199bd7fd74f3e91fc9f31f197c046",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "fixed",
+            "top-0",
+            "left-0",
+            "w-full",
+            "z-50",
+            "flex",
+            "justify-between",
+            "items-center",
+            "px-container-margin",
+            "py-md"
+          ],
+          "childCount": 2
+        },
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "fixed",
+            "inset-y-0",
+            "right-0",
+            "z-[100]",
+            "flex-col",
+            "p-lg",
+            "bg-surface/70",
+            "backdrop-blur-xl"
+          ],
+          "childCount": 6
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "relative",
+            "z-10",
+            "flex",
+            "items-center",
+            "justify-center",
+            "min-h-screen",
+            "px-container-margin",
+            "py-xl",
+            "md:pr-[360px]"
+          ],
+          "childCount": 27
+        },
+        {
+          "tag": "footer",
+          "layout": "flex-row",
+          "classes": [
+            "fixed",
+            "bottom-0",
+            "w-full",
+            "z-40",
+            "flex",
+            "justify-between",
+            "items-center",
+            "px-container-margin",
+            "py-sm",
+            "bg-transparent"
+          ],
+          "childCount": 1
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "pause",
+          "classes": [
+            "text-primary-fixed-dim",
+            "hover:text-primary-fixed",
+            "hover:scale-105",
+            "transition-transform"
+          ],
+          "icon": "pause",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "UPGRADE SHIP",
+          "classes": [
+            "w-full",
+            "py-sm",
+            "border",
+            "border-secondary-container",
+            "text-secondary-container",
+            "font-label-caps",
+            "text-label-caps",
+            "hover:bg-secondary-container/10",
+            "transition-colors",
+            "hud-border-glow-secondary",
+            "uppercase",
+            "tracking-widest",
+            "text-center",
+            "block"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "RESET ALL",
+          "classes": [
+            "text-on-surface-variant",
+            "font-label-caps",
+            "text-label-caps",
+            "hover:text-error",
+            "transition-colors",
+            "uppercase",
+            "tracking-widest",
+            "text-sm",
+            "underline",
+            "decoration-1",
+            "underline-offset-4"
+          ],
+          "icon": null,
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "RETURN TO GAMEPLAY",
+          "classes": [
+            "px-lg",
+            "py-sm",
+            "border",
+            "border-primary-fixed-dim",
+            "text-primary-fixed-dim",
+            "font-label-caps",
+            "text-label-caps",
+            "hover:bg-primary-fixed-dim/10",
+            "transition-colors",
+            "uppercase",
+            "tracking-widest"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "SAVE PREFERENCES",
+          "classes": [
+            "px-lg",
+            "py-sm",
+            "bg-primary-container",
+            "text-on-primary-container",
+            "font-label-caps",
+            "text-label-caps",
+            "hover:bg-primary",
+            "transition-colors",
+            "hud-border-glow",
+            "uppercase",
+            "tracking-widest",
+            "font-bold"
+          ],
+          "icon": null,
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "PAUSED Sector 7-G",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "radio",
+          "label": "speed",
+          "placeholder": "",
+          "name": "speed",
+          "classes": [
+            "peer",
+            "sr-only"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "checkbox",
+          "label": "checkbox",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "sr-only",
+            "peer"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Resume",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "play_arrow",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "leaderboard",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "leaderboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Quit",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "exit_to_app",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "opacity-80",
+            "hover:opacity-100",
+            "uppercase"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Privacy",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "opacity-80",
+            "hover:opacity-100",
+            "uppercase"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "EULA",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "opacity-80",
+            "hover:opacity-100",
+            "uppercase"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "pause",
+        "play_arrow",
+        "settings",
+        "leaderboard",
+        "exit_to_app",
+        "speed",
+        "tune",
+        "keyboard"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "surface-container-highest": "#35343a",
+        "surface-container-high": "#2a292f",
+        "tertiary-fixed-dim": "#d1bcff",
+        "on-tertiary-fixed": "#23005b",
+        "surface-tint": "#00dbe7",
+        "on-error": "#690005",
+        "secondary-container": "#ff24e4",
+        "surface-container-lowest": "#0e0e13",
+        "on-secondary-fixed-variant": "#840076",
+        "on-secondary-container": "#520049",
+        "on-primary-fixed-variant": "#004f54",
+        "inverse-surface": "#e4e1e9",
+        "outline-variant": "#3a494b",
+        "error": "#ffb4ab",
+        "tertiary-fixed": "#e9ddff",
+        "error-container": "#93000a",
+        "background": "#131318",
+        "surface-variant": "#35343a",
+        "on-secondary-fixed": "#3a0033",
+        "primary-fixed-dim": "#00dbe7",
+        "on-tertiary-fixed-variant": "#5700c9",
+        "secondary-fixed": "#ffd7f0",
+        "primary-container": "#00f2ff",
+        "on-primary-container": "#006a71",
+        "surface-container-low": "#1b1b20",
+        "on-error-container": "#ffdad6",
+        "on-tertiary-container": "#7318ff",
+        "on-primary": "#00363a",
+        "inverse-on-surface": "#303035",
+        "surface-container": "#1f1f24",
+        "on-surface-variant": "#b9cacb",
+        "tertiary": "#fcf5ff",
+        "outline": "#849495",
+        "surface-dim": "#131318",
+        "on-surface": "#e4e1e9",
+        "on-tertiary": "#3c0090",
+        "on-primary-fixed": "#002022",
+        "on-secondary": "#5e0053",
+        "secondary-fixed-dim": "#fface8",
+        "tertiary-container": "#e3d4ff",
+        "primary": "#e1fdff",
+        "surface": "#131318",
+        "secondary": "#fface8",
+        "primary-fixed": "#74f5ff",
+        "surface-bright": "#39383e",
+        "inverse-primary": "#00696f",
+        "on-background": "#e4e1e9"
+      },
+      "fonts": [
+        "Sora",
+        "Space Grotesk",
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 3,
+        "flexDirection": "col"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Resume",
+          "icon": "play_arrow",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "leaderboard",
+          "icon": "leaderboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Quit",
+          "icon": "exit_to_app",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Privacy",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "EULA",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "pause",
+          "icon": "pause",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "UPGRADE SHIP",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "RESET ALL",
+          "icon": null,
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "RETURN TO GAMEPLAY",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "SAVE PREFERENCES",
+          "icon": null,
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "PAUSED Sector 7-G",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "speed",
+          "type": "radio",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "checkbox",
+          "type": "checkbox",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "PAUSED Sector 7-G",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Resume",
+          "icon": "play_arrow",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "leaderboard",
+          "icon": "leaderboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Quit",
+          "icon": "exit_to_app",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "UPGRADE SHIP",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "RESET ALL",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "RETURN TO GAMEPLAY",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "SAVE PREFERENCES",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": null,
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Privacy",
+          "icon": null,
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "EULA",
+          "icon": null,
+          "route": "#",
+          "active": true
+        }
+      ],
+      "title": "Game Settings - VectorDrift Lite"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "screenId": "33d9f7fcbaf64dc6a12cc2141b5520eb",
+    "title": "Gameplay - VectorDrift Lite",
+    "htmlFile": "33d9f7fcbaf64dc6a12cc2141b5520eb.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ6Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpZCiVodG1sXzI4ZWMyMGQ3NWY4ZjQyYTlhYThlZDRiYjY1OTQ1NDJkEgsSBxCN19Wi9xcYAZIBIgoKcHJvamVjdF9pZBIUQhIyNTE4OTk3NjQ4NjMyMDkwODM&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/vectordrift-lite-d3172e37/stitch/33d9f7fcbaf64dc6a12cc2141b5520eb.html",
+    "surfaceIds": [
+      "SURF_GAMEPLAY"
+    ]
+  },
+  {
+    "screenId": "620199bd7fd74f3e91fc9f31f197c046",
+    "title": "Game Settings - VectorDrift Lite",
+    "htmlFile": "620199bd7fd74f3e91fc9f31f197c046.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ6Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpZCiVodG1sXzczOWNlMjI4OTQwYzRmMjZhYzhjMjEyMjFhNWYzYjlhEgsSBxCN19Wi9xcYAZIBIgoKcHJvamVjdF9pZBIUQhIyNTE4OTk3NjQ4NjMyMDkwODM&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/vectordrift-lite-d3172e37/stitch/620199bd7fd74f3e91fc9f31f197c046.html",
+    "surfaceIds": [
+      "SURF_GAME_SETTINGS"
+    ]
+  }
+]
